@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="albumItemViewModel"
+            type="com.myd.albumapp.viewmodel.AlbumItemViewModel"/>
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/item_album"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:onClick="@{albumItemViewModel::onClickItem}">
+
+        <TextView
+            android:id="@+id/label_status"
+            android:layout_width="match_parent"
+            android:layout_height="19dp"
+            android:layout_gravity="center|start"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="@dimen/app_vertical_margin"
+            android:text="@{albumItemViewModel.albumItemTitleText}"
+            app:visibility="@{albumItemViewModel.albumItemTitleVisibility}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_gravity="center|end"
+            android:textSize="16sp"
+            android:text=">"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

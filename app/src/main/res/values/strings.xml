@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AlbumApp</string>
+    <string name="album_empty_label_default_text">Tap + button to load albums</string>
+    <string name="album_empty_label_error_text">An error is occurred, please try again later.</string>
+
+    <string name="photo_list_label">Photo List</string>
+    <string name="photo_list_empty_label_default_text">No Photos!</string>
+    <string name="photo_list_empty_label_error_text">An error is occurred, please try again later.</string>
+</resources>
