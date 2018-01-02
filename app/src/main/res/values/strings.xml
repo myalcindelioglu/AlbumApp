@@ -6,4 +6,7 @@
     <string name="photo_list_label">Photo List</string>
     <string name="photo_list_empty_label_default_text">No Photos!</string>
     <string name="photo_list_empty_label_error_text">An error is occurred, please try again later.</string>
+    <string name="photo_detail_album_id_prefix">Album Id: </string>
+    <string name="photo_detail_photo_id_prefix">Photo Id: </string>
+    <string name="photo_detail_title_prefix">Title: </string>
 </resources>

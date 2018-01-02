@@ -1,6 +1,7 @@
 package com.myd.albumapp.viewmodel;
 
 import android.content.Context;
+import android.content.Intent;
 import android.databinding.BaseObservable;
 import android.databinding.BindingAdapter;
 import android.databinding.ObservableField;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.myd.albumapp.model.Photo;
+import com.myd.albumapp.view.PhotoDetailActivity;
 
 import java.util.List;
 
@@ -59,6 +61,9 @@ public class PhotoItemViewModel extends BaseObservable
     @SuppressWarnings("unused")
     public void onClickItem(View view) {
         Log.d(TAG, photo.getId() + " is clicked");
+        Intent intent = new Intent(context, PhotoDetailActivity.class);
+        intent.putExtra(PhotoDetailViewModel.SELECTED_PHOTO_BUNDLE_TEXT, photo);
+        context.startActivity(intent);
     }
 
     @Override

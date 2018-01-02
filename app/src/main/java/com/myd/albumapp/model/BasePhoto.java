@@ -7,6 +7,7 @@ package com.myd.albumapp.model;
 
 public interface BasePhoto {
     int getId();
+    int getAlbumId();
     String getTitle();
     String getUrl();
     String getThumbnailUrl();

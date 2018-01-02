@@ -1,13 +1,16 @@
 package com.myd.albumapp.model;
 
+import java.io.Serializable;
+
 /**
  * Created by MYD on 12/18/17.
  *
  */
 
-public class Photo implements BasePhoto {
+public class Photo implements BasePhoto, Serializable {
 
     private int id;
+    private int albumId;
     private String title;
     private String url;
     private String thumbnailUrl;
@@ -15,6 +18,11 @@ public class Photo implements BasePhoto {
     @Override
     public int getId() {
         return id;
+    }
+
+    @Override
+    public int getAlbumId() {
+        return albumId;
     }
 
     @Override
@@ -34,6 +42,10 @@ public class Photo implements BasePhoto {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public void setAlbumId(int albumId) {
+        this.albumId = albumId;
     }
 
     public void setTitle(String title) {
